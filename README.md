@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ SentinelASM
+# SentinelASM
 
 **Point it at a domain. Get back a plain-English security assessment.**
 
