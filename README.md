@@ -1,6 +1,6 @@
 <div align="center">
 
-# SentinelASM
+# Sentinel
 
 **Point it at a domain. Get back a plain-English security assessment.**
 
@@ -20,9 +20,18 @@ No security expertise required — just a domain name.
 
 ---
 
-## What is SentinelASM?
+## Contents
 
-**SentinelASM** is a full-stack **Attack Surface Management** platform. Enter any domain, and the backend orchestrates **ten independent scan modules** in parallel, streams progress live over WebSockets, and rolls everything into one transparent **0–100 security score** — with a plain-English explanation of what's actually wrong and how to fix it.
+- [What is Sentinel?](#what-is-sentinel)
+- [Scan modules](#scan-modules)
+- [What you get](#what-you-get)
+- [Frontend features](#frontend-features)
+- [Stack](#stack)
+- [Deployment](#deployment)
+
+## What is Sentinel?
+
+**Sentinel** is a full-stack attack surface management platform. Enter any domain, and the backend orchestrates **ten independent scan modules** in parallel, streams progress live over WebSockets, and rolls everything into one transparent **0–100 security score** — with a plain-English explanation of what's actually wrong and how to fix it.
 
 No dashboards full of jargon. No raw scanner output to decode. Just the answer: *is this domain safe, and what should I fix first?*
 
@@ -40,6 +49,8 @@ No dashboards full of jargon. No raw scanner output to decode. Just the answer: 
 | **Email Authentication** | SPF, DKIM, DMARC configuration |
 | **CVE Matching** | Known vulnerabilities in detected tech |
 | **Redirect-Chain Analysis** | Where a link actually takes you |
+
+All ten run concurrently, so a full assessment comes back in the time it takes the slowest module to finish — not the sum of all ten.
 
 ## What you get
 
@@ -76,6 +87,6 @@ Run it however suits you:
 
 <div align="center">
 
-**[Launch SentinelASM →](https://sentinel-frontend-3kx1.onrender.com)**
+**[Launch Sentinel →](https://sentinel-frontend-3kx1.onrender.com)**
 
 </div>
