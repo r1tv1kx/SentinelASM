@@ -1,52 +1,81 @@
-# SentinelASM
+<div align="center">
 
-**SentinelASM** is a full-stack Attack Surface Management (ASM) platform that lets anyone scan a domain and get back a plain-English security assessment — no security expertise required.
+# 🛡️ SentinelASM
 
-🔗 **Live app:** [sentinel-frontend-3kx1.onrender.com](https://sentinel-frontend-3kx1.onrender.com)
+**Point it at a domain. Get back a plain-English security assessment.**
 
-## What it does
+No security expertise required — just a domain name.
 
-Point SentinelASM at a domain and it orchestrates **ten independent scan modules** to map out the target's external attack surface:
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge)](https://sentinel-frontend-3kx1.onrender.com)
+&nbsp;
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-- WHOIS lookup
-- DNS records
-- SSL/TLS configuration
-- HTTP security headers
-- Port scanning
-- Technology fingerprinting
-- Subdomain enumeration
-- Email authentication (SPF / DKIM / DMARC)
-- CVE matching
-- Redirect-chain analysis
+### 🔗 [**Try it live → sentinel-frontend-3kx1.onrender.com**](https://sentinel-frontend-3kx1.onrender.com)
 
-Progress streams live to the frontend over WebSockets as each module completes, and the findings are rolled into a transparent **0–100 security score** with an associated risk level.
+</div>
 
-An AI-assisted layer (OpenAI, with a graceful template fallback when no API key is configured) turns the raw findings into:
+---
 
-- An executive summary in plain English
-- Prioritized, effort-estimated recommendations
-- A downloadable PDF report
+## What is SentinelASM?
 
-## Frontend features
+**SentinelASM** is a full-stack **Attack Surface Management** platform. Enter any domain, and the backend orchestrates **ten independent scan modules** in parallel, streams progress live over WebSockets, and rolls everything into one transparent **0–100 security score** — with a plain-English explanation of what's actually wrong and how to fix it.
 
-The React + TypeScript + Tailwind frontend adds:
+No dashboards full of jargon. No raw scanner output to decode. Just the answer: *is this domain safe, and what should I fix first?*
 
-- JWT-authenticated accounts
-- Scan history
-- Re-scan / diff comparison to track what changed over time
-- A "quick wins" panel that surfaces the highest-impact fixes first
-- A standalone **Fake-Link Checker** — paste any URL and it traces the redirect chain to flag phishing-style tricks (off-domain hops, punycode, shorteners, hidden meta-refreshes) before you click it
+## 🔍 Scan modules
 
-## Stack
+| Module | What it checks |
+|---|---|
+| **WHOIS** | Domain registration & ownership details |
+| **DNS** | Record configuration & misconfigurations |
+| **SSL/TLS** | Certificate validity & cipher strength |
+| **HTTP Security Headers** | CSP, HSTS, X-Frame-Options, and more |
+| **Port Scanning** | Exposed services on the target |
+| **Technology Fingerprinting** | Frameworks, CMS, and libraries in use |
+| **Subdomain Enumeration** | Discovering the full external footprint |
+| **Email Authentication** | SPF, DKIM, DMARC configuration |
+| **CVE Matching** | Known vulnerabilities in detected tech |
+| **Redirect-Chain Analysis** | Where a link actually takes you |
 
-- **Backend:** FastAPI + SQLAlchemy/PostgreSQL
-- **Frontend:** React + TypeScript + Tailwind CSS
-- **Real-time updates:** WebSockets
-- **AI layer:** OpenAI, with template-based fallback
+## ✨ What you get
 
-## Deployment
+- 📊 **A transparent 0–100 security score** with risk level — every point is traceable back to a finding, not a black box
+- 📡 **Live progress over WebSockets** as each of the ten modules completes
+- 🤖 **AI-generated executive summary** (OpenAI, with a graceful template fallback if no API key is set)
+- ✅ **Prioritized, effort-estimated recommendations** — know what to fix first and how long it'll take
+- 📄 **A downloadable PDF report** to share with your team or client
 
-SentinelASM can be deployed either:
+## 🖥️ Frontend features
 
-- Via **Docker Compose** for local development or self-hosting, or
-- As a **one-click Render Blueprint** for production
+- 🔐 JWT-authenticated accounts
+- 🕓 Scan history, with re-scan & diff comparison to track what changed over time
+- ⚡ **Quick Wins panel** — the highest-impact fixes, surfaced first
+- 🔗 **Fake-Link Checker** — a standalone tool that traces a pasted URL's full redirect chain and flags phishing-style tricks: off-domain hops, punycode lookalikes, link shorteners, and hidden meta-refreshes — before you ever click it
+
+## 🏗️ Stack
+
+| Layer | Tech |
+|---|---|
+| Backend | FastAPI + SQLAlchemy / PostgreSQL |
+| Frontend | React + TypeScript + Tailwind CSS |
+| Real-time | WebSockets |
+| AI layer | OpenAI (template fallback if unset) |
+
+## 🚀 Deployment
+
+Run it however suits you:
+
+- **Docker Compose** — spin the whole stack up locally or self-host it
+- **Render Blueprint** — one-click deploy straight to production
+
+---
+
+<div align="center">
+
+**[Launch SentinelASM →](https://sentinel-frontend-3kx1.onrender.com)**
+
+</div>
