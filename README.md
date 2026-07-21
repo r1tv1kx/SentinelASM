@@ -23,17 +23,37 @@ No security expertise required — just a domain name.
 ## Contents
 
 - [What is Sentinel?](#what-is-sentinel)
+- [How it works](#how-it-works)
 - [Scan modules](#scan-modules)
 - [What you get](#what-you-get)
 - [Frontend features](#frontend-features)
 - [Stack](#stack)
 - [Deployment](#deployment)
+- [Author](#author)
 
 ## What is Sentinel?
 
 **Sentinel** is a full-stack attack surface management platform. Enter any domain, and the backend orchestrates **ten independent scan modules** in parallel, streams progress live over WebSockets, and rolls everything into one transparent **0–100 security score** — with a plain-English explanation of what's actually wrong and how to fix it.
 
 No dashboards full of jargon. No raw scanner output to decode. Just the answer: *is this domain safe, and what should I fix first?*
+
+## How it works
+
+```mermaid
+flowchart LR
+    A[Enter a domain] --> B[Backend fans out\n10 scan modules in parallel]
+    B --> C[Findings stream back\nlive over WebSockets]
+    C --> D[Findings roll up into a\ntransparent 0-100 score]
+    D --> E[AI generates a plain-English\nexecutive summary]
+    E --> F[Prioritized fixes +\ndownloadable PDF report]
+```
+
+1. **Submit a domain** — no signup required to run a scan.
+2. **Ten modules run concurrently** (WHOIS, DNS, SSL/TLS, headers, ports, tech fingerprinting, subdomains, email auth, CVEs, redirect chains) — total time is bounded by the slowest module, not the sum of all ten.
+3. **Results stream in live** over a WebSocket connection as each module finishes, instead of waiting on one big response.
+4. **Everything rolls into a single 0–100 score** — every point deducted is traceable back to a specific finding.
+5. **An AI layer turns the raw findings into an executive summary** and a prioritized, effort-estimated fix list (falls back to a template if no OpenAI key is configured, so the app still works without one).
+6. **Export a PDF** to share the assessment with a team or client.
 
 ## Scan modules
 
@@ -82,6 +102,10 @@ Run it however suits you:
 
 - **Docker Compose** — spin the whole stack up locally or self-host it
 - **Render Blueprint** — one-click deploy straight to production
+
+## Author
+
+Built by [Ritvik Singh](https://github.com/r1tv1kx). Issues and pull requests are welcome.
 
 ---
 
