@@ -14,7 +14,7 @@ No security expertise required — just a domain name.
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-### 🔗 [**Try it live → sentinel-frontend-3kx1.onrender.com**](https://sentinel-frontend-3kx1.onrender.com)
+### [**Try it live → sentinel-frontend-3kx1.onrender.com**](https://sentinel-frontend-3kx1.onrender.com)
 
 </div>
 
@@ -26,7 +26,7 @@ No security expertise required — just a domain name.
 
 No dashboards full of jargon. No raw scanner output to decode. Just the answer: *is this domain safe, and what should I fix first?*
 
-## 🔍 Scan modules
+## Scan modules
 
 | Module | What it checks |
 |---|---|
@@ -41,22 +41,22 @@ No dashboards full of jargon. No raw scanner output to decode. Just the answer: 
 | **CVE Matching** | Known vulnerabilities in detected tech |
 | **Redirect-Chain Analysis** | Where a link actually takes you |
 
-## ✨ What you get
+## What you get
 
-- 📊 **A transparent 0–100 security score** with risk level — every point is traceable back to a finding, not a black box
-- 📡 **Live progress over WebSockets** as each of the ten modules completes
-- 🤖 **AI-generated executive summary** (OpenAI, with a graceful template fallback if no API key is set)
-- ✅ **Prioritized, effort-estimated recommendations** — know what to fix first and how long it'll take
-- 📄 **A downloadable PDF report** to share with your team or client
+- **A transparent 0–100 security score** with risk level — every point is traceable back to a finding, not a black box
+- **Live progress over WebSockets** as each of the ten modules completes
+- **AI-generated executive summary** (OpenAI, with a graceful template fallback if no API key is set)
+- **Prioritized, effort-estimated recommendations** — know what to fix first and how long it'll take
+- **A downloadable PDF report** to share with your team or client
 
-## 🖥️ Frontend features
+## Frontend features
 
-- 🔐 JWT-authenticated accounts
-- 🕓 Scan history, with re-scan & diff comparison to track what changed over time
-- ⚡ **Quick Wins panel** — the highest-impact fixes, surfaced first
-- 🔗 **Fake-Link Checker** — a standalone tool that traces a pasted URL's full redirect chain and flags phishing-style tricks: off-domain hops, punycode lookalikes, link shorteners, and hidden meta-refreshes — before you ever click it
+- JWT-authenticated accounts
+- Scan history, with re-scan & diff comparison to track what changed over time
+- **Quick Wins panel** — the highest-impact fixes, surfaced first
+- **Fake-Link Checker** — a standalone tool that traces a pasted URL's full redirect chain and flags phishing-style tricks: off-domain hops, punycode lookalikes, link shorteners, and hidden meta-refreshes — before you ever click it
 
-## 🏗️ Stack
+## Stack
 
 | Layer | Tech |
 |---|---|
@@ -65,7 +65,7 @@ No dashboards full of jargon. No raw scanner output to decode. Just the answer: 
 | Real-time | WebSockets |
 | AI layer | OpenAI (template fallback if unset) |
 
-## 🚀 Deployment
+## Deployment
 
 Run it however suits you:
 
